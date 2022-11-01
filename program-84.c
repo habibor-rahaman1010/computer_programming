@@ -1,0 +1,28 @@
+// LCM find out in c program...
+
+#include <stdio.h>
+
+int main() {
+    int a, b, x, gcd, lcm;
+    printf("Enter value of (a and b): ");
+    scanf("%d %d", &a, &b);
+
+    if(a < b){
+        x = a;
+    }
+    else{
+        x = b;
+    }
+
+    for(; x >= 1; x--){
+        if(a % x == 0 && b % x == 0){
+            gcd = x;
+            break;
+        }
+    }
+    lcm = (a * b) / gcd;
+    printf("GCD is: %d \n", lcm);
+
+return 0;
+}
+
